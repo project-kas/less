@@ -4,11 +4,15 @@
   <script src = "script.js"></script>
   <body>
     <form>
-      <label>Username: </label>
-      <input type ="text" id ="username"></input><br><br>
-      <label>Password: </label>
-      <input type="password" id="password"></input><br><br>
-      <input type="button" value="Login" onclick="run()" ></input>
+   <div class ="head"><h2>Lengut Security System (LSSL) - LTD</h2><br><br>
+      <div class="main">
+        <div class="log"><p>Please provide the correct login credentials!</p>
+          <br>
+          <input type ="text" id ="username" placeholder="Username" required></input><br><br>
+        <input type="password" id="password" placeholder="Password"></input><br><br>
+      <input type="button" value="Login" onclick="run()" id="btnlog"></input><a href="">Forgot Password?</a>
+    <br><br>
+      </div></div></div>
     </form>
   </body>
 </html>
