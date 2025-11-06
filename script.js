@@ -1,4 +1,4 @@
 function run(){
-    window.open("home.html");
+    location.replace("home.html");
     alert("Hello");
   }
