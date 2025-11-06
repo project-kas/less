@@ -4,12 +4,12 @@
     }
     body{
         font-size: 17px;
-        font-familiy: "Lucida Sans", sans-serif;
+        font-family: "Lucida Sans", sans-serif;
       	background:#456;;
     }
     .container{
         display: grid;
-        grid-template-area:
+        grid-template-areas:
             'header'
             'search'
             'table';
