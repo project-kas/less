@@ -1,3 +1,3 @@
 function run(){
-    location.replace("html/home.html");
+    location.replace("less/html/home.html");
 }
