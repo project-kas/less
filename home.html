@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mm.css">
+    </head>
+  <script>
+    function run(){
+      var data1 = prompt("Please Provide ID/Reg.NO");
+    }
+  </script>
+    <body>
+        <form>
+            <div class="container">
+                <div class="header"><h1>LSSL</h1></div>
+                <div class="search">
+                  <table>
+                    <tr><td><input type="button" value="Search" onclick="run()" id="search"></td></tr>
+                  </table>
+            		</div>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID/Reg.NO</th>
+                            <th>Gender</th>
+                            <th>Mobile</th>
+                          	<th>Status</th>
+                            <th>Address</th>
+                        	  <th>Registered</th>
+                        </tr>
+                        <tr>
+                            <td>John Kin</td>
+                            <th>123456</th>
+                            <td>Male</td>
+                            <th>0712345678</th>
+                          	<td>Resident</td>
+                          	<th>45 Street</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Mary Chan</td>
+                            <th>654321</th>
+                            <td>Female</td>
+                            <th>0789456123</th>
+                         		<td>Visitor</td>
+                          	<th>45 Street</th>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Doe</td>
+                            <th>456827</th>
+                            <td>Female</td>
+                            <th>0712345678</th>
+                         		<td>Visitor</td>
+                          	<th>45 Street</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Jack Yen</td>
+                            <th>4569872</th>
+                            <td>Male</td>
+                            <th>0789456123</th>
+                          	<td>Resident</td>
+                          	<th>45 Street</th>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Brian Lee Yen</td>
+                            <th>4569872</th>
+                            <td>Male</td>
+                            <th>0789456123</th>
+                          	<td>Resident</td>
+                          	<th>45 Street</th>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-size: 17px;
+        font-familiy: "Lucida Sans", sans-serif;
+      	background:#456;;
+    }
+    .container{
+        display: grid;
+        grid-template-area:
+            'header'
+            'search'
+            'table';
+      	
+    }
+  	.header h1{
+      color: white;
+      text-align:center;
+      font-size: 40px;
+      background-color: black;
+  	}
+  	.search{
+        text-align:right;
+     		align-items:right;
+    }
+  	.search table tr td{
+    		border:none;
+ 		}
+    .search #search{
+      	border-radius: 4px;
+        border: none;
+        height:20px;
+        margin-bottom: 10px;
+        width: 100px;
+      	font-style:oblique;
+    }
+  	#search:hover{
+      cursor: pointer;
+  	}
+  	.table{
+        background: #546;
+        color:white;1119 546
+    }
+    .table table{
+      border-spacing: 17px;
+      border-collapse: separate;
+      width: 100%;
+    }
+    .table, th, td{
+        border: 1px solid black;
+    }
+    td{
+        border-style: dotted;
+        border-radius: 6px;
+    }
+    th{
+        background: #456;
+        border-style:dashed;
+    }
+</style>
