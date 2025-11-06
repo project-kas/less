@@ -1,0 +1,46 @@
+  *{
+    border-spacing: border-box;
+  }
+  body{
+    display: grid;
+    font-size: 17px;
+  }
+  .container{
+    border: 1px solid black;
+    grid-template-areas:
+      'header'
+      'nav'
+      'content'
+      'sidebar'
+      'footer';
+  }
+  .header {
+    margin: 5px;
+    background:black;
+    font-size:30px;
+    color:white;
+    text-align:center;
+  }
+  .nav{
+    margin:5px;
+    background: #456;
+  }
+  .nav li ul a{
+    text-decoration: none;
+    color:white;
+    font-size:20px;
+  }
+  .content{
+    width:;
+    text-align:center;
+  }
+  input{
+    height: 25px;
+    font-size:17px;
+    text-align:center;
+    border-radius: 4px;
+    margin: 10px;
+  }
+  .sidebar{
+    width:;
+  }
