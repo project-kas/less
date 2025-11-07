@@ -1,15 +1,19 @@
  table = users
  fields = username. password, id
  <?php
-    $dsn = "mysql:host=sqll309.infinityfree.com;dbname=if0_40344115_data;charset=utf8mb4";
+    $dbs = "sqll309.infinityfree.com";
+    $dbname = "if0_40344115_data";
     $dbusername = "if0_40344115";
     $dbpassword = "Programming3736";
+    $conn = "";
 
-    try {
-        $pdo = new PDO($dsn, $dbusername, $dbpassword);
-        $pdo->setAttribute(PDO::AFTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
-    } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
+    $conn = mysqli_connect($dbs, $dbusername,
+     $dbpassword, $dbname);
+
+     if ($conn) {
+        echo "Connection Successful";
+     }
+     else {
+        echo "No Connection";
+     }
  ?>
