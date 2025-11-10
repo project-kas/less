@@ -37,8 +37,14 @@
         </div>
     </div>
     <script>
-      window.print();
+       // location.href = "printdata.html";
+        const myTimeout = setTimeout(myGreeting, 3000);
+        function myGreeting(){
+            window.print();
        location.href = "data.html";
+            // alert("Loading");
+        }
+       
     </script>
 </body>
 </html>
