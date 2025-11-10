@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: darkgrey;
+}
+h1{
+    text-align: center;
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+h2{
+    font-size: 30px;;
+    font-style: oblique;
+    text-align: center;
+    color: aquamarine;
+    background-color: black;
+    margin: 5px px 20px px;
+}
+.data{
+    background-color: #667;
+}
+.nav{
+    font-size: 20px;
+    text-align: right;
+    margin: 20px 5px 0px 0px;
+}
+.search{
+    margin: 0px 0px 16px 5px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 8px 0px;
+    background-color: rgb(34, 46, 34);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.table{
+    margin: 0px 5px 0px 5px;
+}
+table{
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+.data table{
+    color: antiquewhite;
+}
+iframe{
+    display: none;
+}

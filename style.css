@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 15, 36);
+}
+.login{
+    margin: auto;
+    width: 50vh;
+    border: 3px solid #2d2f3e;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white
+}
+h1{
+    text-align: center;
+    color: #333;
+}
+hr{
+    height: 5px;
+    background-color: green;
+}
+#uname, #pass, #fname, #mname, #lname, #gender,
+ #uid, #ustatus, #uphone, #name{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#btnlog, #btnreg{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    width: 48%;
+}
+#btnret{
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 1px 0;
+    padding: 8px 14px;
+    width: 100%;
+}
+#btnlog, #btnreg, #btnret:hover{
+    cursor: pointer;
+}
