@@ -10,7 +10,7 @@ h1{
     margin: 0px 0px 0px 0px;
 }
 h2{
-    font-size: 30px;;
+    font-size: 24px;;
     font-style: oblique;
     text-align: center;
     color: aquamarine;
@@ -21,7 +21,7 @@ h2{
     background-color: #667;
 }
 .nav{
-    font-size: 20px;
+    font-size: 16px;
     text-align: right;
     margin: 20px 5px 0px 0px;
 }
