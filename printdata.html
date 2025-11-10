@@ -3,22 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Data</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="data.css">
+    <link rel="stylesheet" href="print.css">
 </head>
 <body>
     <div class="data">
-        <h1>Welcome to Lengut Security System!</h1>
-        <div class="nav">
-            <a href="reg.html">Register</a>
-            <a href="index.html">Log_Out</a>
-        </div>
-        <h2>Captured_Datalist</h2>
-        <div class="search">
-            <a href="ret.html">Retrieve</a>
-            <a href="printdata.html" onclick="pd()">Print_Data</a>
-        </div>
+        <h1>L.S.S Captured Data.</h1>
         <div class="table">
             <table>
                 <tr>
@@ -45,5 +36,9 @@
             </table>
         </div>
     </div>
+    <script>
+      window.print();
+       location.href = "data.html";
+    </script>
 </body>
 </html>

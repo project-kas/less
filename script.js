@@ -7,7 +7,6 @@ function reg(){
 function log(){
     location.href = "index.html";
 }
-function show(){
-    location.href = "index.html";
-    alert("hello");
+function pd(){
+    alert("Print L.S.S Captured Data.");
 }
