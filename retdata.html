@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengut Community</title>
+    <script type="module" src="retdata.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <div class="login">
+        <h1>L.S.S File Manipulation Form!</h1>
+        <div class="nav">
+            <button id="btnreg">Register</button>
+            <button id="btndt">View_Data</button>
+            <button id="logout">Log_Out</button>
+        </div>
+            <input type="text" id="uid" placeholder="Reg/ID.NO"></input><br><br>
+            <button id="btnret" onclick="">Retrieve</button>
+            <hr>
+            <input type="text" id="uname" placeholder="Name"></input><br><br>
+            <select type="text" id="gender">
+                <option value="" hidden selected disabled>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+            <input type="text" id="uphone" placeholder="Phone.NO"></input><br><br>
+            <select type="text" id="ustatus">
+                <option value="" hidden selected disabled>Status</option>
+                <option value="Resident">Resident</option>
+                <option value="Visitor">Visitor</option>
+            </select><br><br>
+            <button id="btnupd">Upadate</button>
+            <button id="btndel">Delete</button>
+</div>
+</body>
+<script>
+//Logout
+const btnout = document.getElementById("logout");
+btnout.addEventListener("click", logout);
+function logout(){
+    location.href = "index.html";
+}
+
+//Print Data
+const btnprint = document.getElementById("btndt");
+btnprint.addEventListener("click", printdata);
+function printdata(){
+    location.href = "data.html";
+}
+
+//Register Data
+const btnregister = document.getElementById("btnreg");
+btnregister.addEventListener("click", register);
+function register(){
+    location.href = "regdata.html";
+}
+</script>
+</html>

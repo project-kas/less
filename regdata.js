@@ -1,0 +1,79 @@
+//imports
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+import { getDatabase, set, ref, get } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
+//config
+const firebaseConfig = {
+    apiKey: "AIzaSyA4KJe2PBLCuEwg0zmDQ0ckSHA9qz8zSD4",
+    authDomain: "kaka-c51be.firebaseapp.com",
+    databaseURL: "https://kaka-c51be-default-rtdb.firebaseio.com",
+    projectId: "kaka-c51be",
+    storageBucket: "kaka-c51be.firebasestorage.app",
+    messagingSenderId: "841320949377",
+    appId: "1:841320949377:web:014aff10194c2bf70bcf80"
+};
+//declare app & database
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+//check connection
+//alert("Firebase Realtime Database initialized successfully.");
+
+//ADD DATA TO DATABASE
+
+//declare button
+const BtnAdd = document.getElementById("btnreg");
+//add event listener to button
+BtnAdd.addEventListener("click", AddData);
+//function to add data
+function AddData() {
+
+    const fname = document.getElementById("fname").value;
+    const mname = document.getElementById("mname").value;
+    const lname = document.getElementById("lname").value;
+    const name = fname + " " + mname + " " + lname;
+    const gender = document.getElementById("gender").value;
+    const uid = document.getElementById("uid").value;
+    const uphone = document.getElementById("uphone").value;
+    const ustatus = document.getElementById("ustatus").value;
+
+    if (uid === "") {
+        alert("Please Enter Reg/ID_Num!");
+        return;
+    }
+    const userRef = ref(db, 'Members/' + uid);
+    get(userRef)
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+                //const data = snapshot.val();
+
+                alert("Reg/ID_Num already in Use!");
+
+            } if (!snapshot.exists()) {
+                set(userRef, {
+                    Reg_Num: uid,
+                    Name: name,
+                    Phone: uphone,
+                    Gender: gender,
+                    Status: ustatus
+
+                })
+                    .then(() => {
+                        alert("Successfully Registered!");
+                    })
+                    .catch((error) => {
+                        alert("Failed to Update Data!" + error);
+                    });
+
+            } else {
+
+            }
+        }).catch((error) => {
+            alert("Failed to Load Data!" + error);
+        });
+}
+
+//Logout
+const btnout = document.getElementById("btnlog");
+btnout.addEventListener("click", logout);
+function logout() {
+    location.href = "index.html";
+}

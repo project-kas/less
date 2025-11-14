@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengut Community</title>
+    <script type="module" src="data.js" defer></script>
+    <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <div class="data">
+        <h1>Welcome to Lengut Security System!</h1>
+        <div class="nav">
+            <button id="btnreg">Register</button>
+            <button id="logout">Log_Out</button>
+        </div>
+        <h2>Captured_Datalist</h2>
+        <div class="search">
+            <button id="btnret">Retrieve</button>
+            <button id="btnfpd">Print_Data</button>
+        </div>
+        <div class="table">
+            <table id="mytable">
+                <tr>
+                    <th style="width: 200px;">Name</th>
+                    <th style="width: 80px;">Gender</th>
+                    <th style="width: 100px;">Reg/ID.NO</th>
+                    <th style="width: 120px;">Phone.NO</th>
+                    <th style="width: 150px;">Status</th>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+//Logout
+const btnout = document.getElementById("logout");
+btnout.addEventListener("click", logout);
+function logout(){
+    location.href = "index.html";
+}
+
+//Register
+const btnreg = document.getElementById("btnreg");
+btnreg.addEventListener("click", register);
+function register(){
+    location.href = "regdata.html";
+}
+//Print Data
+const btnprint = document.getElementById("btnfpd");
+btnprint.addEventListener("click", printdata);
+function printdata(){
+    location.href = "printdata.html";
+}
+
+//Retrieve Data
+const btnret = document.getElementById("btnret");
+btnret.addEventListener("click", retrieve);
+function retrieve(){
+    location.href = "retdata.html";
+}
+</script>
+</html>
