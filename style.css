@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -11,7 +12,8 @@ body {
     align-items: center;
     background-color: rgb(5, 15, 36);
 }
-.login{
+
+.login {
     margin: auto;
     width: 50vh;
     border: 3px solid #2d2f3e;
@@ -20,16 +22,27 @@ body {
     border-radius: 10px;
     background-color: white
 }
-h1{
+
+h1 {
     text-align: center;
     color: #333;
 }
-hr{
+
+hr {
     height: 5px;
     background-color: green;
 }
-#uname, #pass, #fname, #mname, #lname, #gender,
- #uid, #ustatus, #uphone, #name{
+
+#uname,
+#regno,
+#fname,
+#mname,
+#lname,
+#gender,
+#uid,
+#ustatus,
+#uphone,
+#name {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -38,7 +51,11 @@ hr{
     box-sizing: border-box;
     border-radius: 4px;
 }
-#btnlog, #btnreg, #btndel, #btnupd{
+
+#btnlog,
+#btnreg1,
+#btndel,
+#btnupd {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -47,7 +64,17 @@ hr{
     border-radius: 4px;
     width: 48%;
 }
-#btnret{
+#btnclear, #logout{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    width: 48%;
+}
+
+#btnret {
     background-color: #04AA6D;
     color: white;
     border: none;
@@ -56,6 +83,24 @@ hr{
     padding: 8px 14px;
     width: 100%;
 }
-#btnlog, #btnreg, #btnret, #btndel, #btnupd:hover{
+#btnreg, #btndt {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 1px 0;
+    padding: 8px 14px;
+    width: 48%;
+}
+
+#logout,
+#btnclear,
+#btnlog,
+#btndt,
+#btnreg1,
+#btnreg,
+#btnret,
+#btndel,
+#btnupd:hover {
     cursor: pointer;
 }

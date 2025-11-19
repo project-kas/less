@@ -20,16 +20,24 @@ const db = getDatabase(app);
 //ADD DATA TO DATABASE
 
 //declare button
-const BtnAdd = document.getElementById("btnreg");
+const BtnAdd = document.getElementById("btnreg1");
 //add event listener to button
 BtnAdd.addEventListener("click", AddData);
 //function to add data
 function AddData() {
 
+    function titleCase(name1) {
+        return name1.toLowerCase()
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    }
+
     const fname = document.getElementById("fname").value;
     const mname = document.getElementById("mname").value;
     const lname = document.getElementById("lname").value;
-    const name = fname + " " + mname + " " + lname;
+    const name1 = fname + " " + mname + " " + lname;
+    const name = titleCase(name1);
     const gender = document.getElementById("gender").value;
     const uid = document.getElementById("uid").value;
     const uphone = document.getElementById("uphone").value;

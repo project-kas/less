@@ -1,19 +1,15 @@
-if (!sessionStorage.getItem('RegNo')) {
-    alert("Please login first!");
-    location.href = "index.html";
-}
 //imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-import { getDatabase, ref, get, set, } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
+import {getDatabase, ref, get, set, } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
 //config
 const firebaseConfig = {
-    apiKey: "AIzaSyA4KJe2PBLCuEwg0zmDQ0ckSHA9qz8zSD4",
-    authDomain: "kaka-c51be.firebaseapp.com",
-    databaseURL: "https://kaka-c51be-default-rtdb.firebaseio.com",
-    projectId: "kaka-c51be",
-    storageBucket: "kaka-c51be.firebasestorage.app",
-    messagingSenderId: "841320949377",
-    appId: "1:841320949377:web:014aff10194c2bf70bcf80"
+  apiKey: "AIzaSyA4KJe2PBLCuEwg0zmDQ0ckSHA9qz8zSD4",
+  authDomain: "kaka-c51be.firebaseapp.com",
+  databaseURL: "https://kaka-c51be-default-rtdb.firebaseio.com",
+  projectId: "kaka-c51be",
+  storageBucket: "kaka-c51be.firebasestorage.app",
+  messagingSenderId: "841320949377",
+  appId: "1:841320949377:web:014aff10194c2bf70bcf80"
 };
 //declare app & database
 const app = initializeApp(firebaseConfig);
@@ -33,13 +29,13 @@ function insertRow(data) {
 
     const count = table.rows.length - 1;
 
-    cell1.innerText = count;
-    cell2.innerText = data.Name;
+    cell1.innerText =  count;
+    cell2.innerText =  data.Name;
     cell3.innerText = data.Gender;
     cell4.innerText = data.Reg_Num;
     cell5.innerText = data.Phone;
     cell6.innerText = data.Status;
-    if (data.Status === "Registered") {
+   if(data.Status === "Registered"){
         cell6.style.backgroundColor = "lightgreen";
         cell6.style.color = "black";
     } else {
