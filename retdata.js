@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
 import { getDatabase, remove, ref, get, set } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
 //config
+
 const firebaseConfig = {
     apiKey: "AIzaSyA4KJe2PBLCuEwg0zmDQ0ckSHA9qz8zSD4",
     authDomain: "kaka-c51be.firebaseapp.com",
@@ -200,3 +201,4 @@ function UpdateData() {
 
     }
 }
+
