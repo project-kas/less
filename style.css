@@ -54,6 +54,7 @@ hr {
 
 #btnlog,
 #btnreg1,
+#btnreg,
 #btndel,
 #btnupd {
     background-color: #04AA6D;
@@ -103,4 +104,5 @@ hr {
 #btndel,
 #btnupd:hover {
     cursor: pointer;
+
 }
