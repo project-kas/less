@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin: 2px;
+    display: grid;
+    /*justify-content: center;*/
+    background-color: rgb(5, 15, 36);
+    color: white;
+}
+header{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(10, 25, 60);
+    margin-top: 10px;
+}
+.profile{
+    padding: 10px;
+    text-align: center;
+}
+#icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#icon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 2px white;
+}
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#update, #logout{
+    width: 150px;
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(5, 15, 36);
+    font-size: 16px;
+    border-radius: 5px;
+}
+#update:hover, #logout:hover{
+    cursor: pointer;
+    background-color: rgb(10, 25, 60);
+}
+.main{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+.info{
+    padding-left: 20px;
+}
+#mainimg{
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(10, 25, 60);
+}
