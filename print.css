@@ -1,0 +1,33 @@
+.noPrint {
+    display: none;
+}
+
+/* Ensure table headers repeat on each page if the table spans multiple pages */
+@media print {
+    thead {
+        display: table-header-group;
+    }
+}
+
+/* Adjust font sizes for better readability on paper */
+body {
+    font-size: 10pt;
+}
+h1{
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #080808;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Manage page breaks within table rows if necessary */
+tr {
+    page-break-inside: avoid;
+}
