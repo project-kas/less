@@ -1,15 +1,15 @@
-const btnprof = document.getElementById('update');
-btnprof.addEventListener('click', UpdateProfile);
+const btnreg = document.getElementById('register');
+btnreg.addEventListener('click', register);
 
-function UpdateProfile() {
-    location.href = 'retdata.html';
+function register() {
+    location.href = 'regdata.html';
 }
 
-const btnlog = document.getElementById('logout');
-btnlog.addEventListener('click', Logout);
+const btnlog = document.getElementById('login');
+btnlog.addEventListener('click', login);
 
-function Logout() {
-    location.href = 'index.html';
+function login() {
+    location.href = 'login.html';
 }
 
     document.querySelector(".current-year").textContent = new Date().getFullYear();

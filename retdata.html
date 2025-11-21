@@ -1,14 +1,14 @@
 <script type="module">
     if (!sessionStorage.getItem('RegNo')) {
         alert("Please login first!");
-        location.href = "index.html";
+        location.href = "login.html";
     }
     //Logout
     const btnout = document.getElementById("logout");
     btnout.addEventListener("click", logout);
     function logout() {
         sessionStorage.clear();
-        location.href = "index.html";
+        location.href = "login.html";
     }
 
     //Print Data
@@ -41,33 +41,42 @@
 </head>
 
 <body>
-    <div class="login">
-        <h1>L.S.S File Manipulation Form!</h1>
-        <div class="nav">
-            <button id="btnclear">Clear_Data</button>
+    <div class="container">
+        <header>
+            <h1>Welcome to L.S.S.L</h1>
+        </header>
+        <div class="buttons">
             <button id="logout">Log_Out</button>
-            <button id="btnreg">Register</button>
-            <button id="btndt">View_Data</button>
-
         </div>
-        <input type="text" id="uid" placeholder="Reg/ID.NO"></input><br><br>
-        <button id="btnret" onclick="">Retrieve</button>
-        <hr>
-        <input type="text" id="uname" placeholder="Name"></input><br><br>
-        <select type="text" id="gender">
-            <option value="" hidden selected disabled>Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select><br><br>
-        <input type="text" id="uphone" placeholder="Phone.NO"></input><br><br>
-        <select type="text" id="ustatus">
-            <option value="" hidden selected disabled>Status</option>
-            <option value="Registered">Registered</option>
-            <option value="Not_Registred">Not_Registred</option>
-        </select><br><br>
-        <button id="btnupd">Upadate</button>
-        <button id="btndel">Delete</button>
+        <div class="login">
+            <h2>Administrator Form!</h2>
+            <div class="nav">
+                <button id="btnclear">Clear_Data</button>
+                <button id="btndt">View_Data</button>
+
+            </div>
+            <input type="text" id="uid" placeholder="Reg/ID.NO"></input><br><br>
+            <button id="btnret" onclick="">Retrieve</button>
+            <hr>
+            <input type="text" id="uname" placeholder="Name"></input><br><br>
+            <select type="text" id="gender">
+                <option value="" hidden selected disabled>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+            <input type="text" id="uphone" placeholder="Phone.NO"></input><br><br>
+            <select type="text" id="ustatus">
+                <option value="" hidden selected disabled>Status</option>
+                <option value="Registered">Registered</option>
+                <option value="Pending">Pending</option>
+            </select><br><br>
+            <button id="btnupd">Upadate</button>
+            <button id="btndel">Delete</button>
+        </div>
     </div>
+    <footer>
+            <p> &copy; <span class="current-year"></span> Lengut Community. All rights reserved.</p>
+        </footer>
 </body>
 
 </html>

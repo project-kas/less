@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="fav.ico">
 </head>
+
 <body>
-    <div class="login">
-        <h1>Lengut Security System!</h1>
-    <input type="text" id="fname" placeholder="First_Name"></input><br><br>
-    <input type="text" id="mname" placeholder="Middle_Name"></input><br><br>
-    <input type="text" id="lname" placeholder="Last_Name"></input><br><br>
-    <select id="gender" required>
-        <option value="" disabled selected hidden>Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-    </select><br><br>
-    <input type="text" id="uid" placeholder="Reg/ID.NO"></input><br><br>
-    <input type="text" id="uphone" placeholder="Phone.NO"></input><br><br>
-    <select id="ustatus" required>
-        <option value="" disabled selected hidden>Status</option>
-        <option value="Resident">Resident</option>
-        <option value="Visitor">Visitor</option>
-    </select>
-    </input><br><br>
-    <button id="btnlog">Login</button>
-    <button id="btnreg1">Register</button>
-</div>
+    <div class="container">
+        <header>
+            <h1>Welcome to L.S.S.L</h1>
+        </header>
+        <div class="buttons">
+            <button id="home">Home</button>
+        </div>
+        <div class="login">
+            <h2>Register!</h2>
+            <input type="text" id="fname" placeholder="First_Name"></input><br><br>
+            <input type="text" id="mname" placeholder="Middle_Name"></input><br><br>
+            <input type="text" id="lname" placeholder="Last_Name"></input><br><br>
+            <select id="gender" required>
+                <option value="" disabled selected hidden>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+            <input type="text" id="uid" placeholder="Reg/ID.NO"></input><br><br>
+            <input type="text" id="uphone" placeholder="Phone.NO"></input><br><br>
+            
+            <button id="btnreg1">Register</button>
+            <button id="btnlog">Login</button>
+        </div>
+    </div>
+    <footer>
+            <p> &copy; <span class="current-year"></span> Lengut Community. All rights reserved.</p>
+        </footer>
 </body>
+
 </html>

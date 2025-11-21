@@ -1,7 +1,7 @@
 <script type="module">
     if (!sessionStorage.getItem('RegNo')) {
         alert("Please login first!");
-        location.href = "index.html";
+        location.href = "login.html";
     }
 
     //Logout
@@ -9,15 +9,9 @@
     btnout.addEventListener("click", logout);
     function logout() {
         sessionStorage.clear();
-        location.href = "index.html";
+        location.href = "login.html";
     }
 
-    //Register
-    const btnreg = document.getElementById("btnreg");
-    btnreg.addEventListener("click", register);
-    function register() {
-        location.href = "regdata.html";
-    }
     //Print Data
     const btnprint = document.getElementById("btnfpd");
     btnprint.addEventListener("click", printdata);
@@ -29,6 +23,11 @@
     const btnret = document.getElementById("btnret");
     btnret.addEventListener("click", retrieve);
     function retrieve() {
+        const code = prompt("Enter Access Code:");
+        if (code !== "kasewa") {
+            alert("Access Denied.");
+            return;
+        }
         location.href = "retdata.html";
     }
 </script>
@@ -48,7 +47,6 @@
     <div class="data">
         <h1>Welcome to Lengut Security System!</h1>
         <div class="nav">
-            <button id="btnreg">Register</button>
             <button id="logout">Log_Out</button>
         </div>
         <h2>Captured_Datalist</h2>

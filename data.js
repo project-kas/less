@@ -1,6 +1,6 @@
 if (!sessionStorage.getItem('RegNo')) {
     alert("Please login first!");
-    location.href = "index.html";
+    location.href = "login.html";
 }
 //imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";

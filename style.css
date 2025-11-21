@@ -7,12 +7,24 @@ body {
     font-size: 17px;
     margin: 0;
     min-height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(5, 15, 36);
 }
-
+.container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'profile'
+        'content'
+        'main'
+        'image'
+        'info'
+        'footer';
+    gap: 10px;
+    background-color: rgb(5, 15, 36);
+    padding: 10px;
+}
 .login {
     margin: auto;
     width: 50vh;
@@ -23,9 +35,10 @@ body {
     background-color: white
 }
 
-h1 {
-    text-align: center;
+h2 {
+    text-align: left;
     color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 hr {
@@ -51,10 +64,9 @@ hr {
     box-sizing: border-box;
     border-radius: 4px;
 }
-
 #btnlog,
+#btndt,
 #btnreg1,
-#btnreg,
 #btndel,
 #btnupd {
     background-color: #04AA6D;
@@ -65,7 +77,15 @@ hr {
     border-radius: 4px;
     width: 48%;
 }
-#btnclear, #logout{
+ #logout{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+ }
+#btnclear{
     background-color: #f44336;
     color: white;
     padding: 14px 20px;
@@ -84,7 +104,7 @@ hr {
     padding: 8px 14px;
     width: 100%;
 }
-#btnreg, #btndt {
+#btnreg {
     background-color: #04AA6D;
     color: white;
     border: none;
@@ -104,5 +124,40 @@ hr {
 #btndel,
 #btnupd:hover {
     cursor: pointer;
+}
 
+
+
+
+header{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(10, 25, 60);
+    margin-top: 0px;
+}
+h1{
+    color: white;
+}
+
+#home {
+    width: 150px;
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(10, 25, 60);
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;;
+}
+#home:hover {
+    cursor: pointer;
+    background-color: rgb(5, 15, 36);
+}
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(10, 25, 60);
+    color: white;
+    margin-top: 20px;
 }

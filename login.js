@@ -32,7 +32,6 @@ function CheckData() {
     //create session storage items
     sessionStorage.setItem('RegNo', document.getElementById("regno").value);
     const session = sessionStorage.getItem('RegNo');
-    console.log('Your session RegNo is: ' + session);
     
 
     const phone = document.getElementById("uphone").value;
@@ -66,12 +65,22 @@ function CheckData() {
             }
         }).catch((error) => {
             console.error(error);
+            alert(error);
         });
 }
 
 //Register
-const btnreg = document.getElementById("btnreg");
+const btnreg = document.getElementById("btnreg1");
 btnreg.addEventListener("click", register);
 function register(){
     location.href = "regdata.html";
 }
+
+//Home
+const btnhome = document.getElementById("home");
+btnhome.addEventListener("click", home);
+function home(){
+    location.href = "index.html";
+}
+
+document.querySelector(".current-year").textContent = new Date().getFullYear();

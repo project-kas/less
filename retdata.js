@@ -27,6 +27,7 @@ BtnRet.addEventListener("click", ReadData);
 //function to add data
 
 function ReadData() {
+
     const uid = document.getElementById("uid").value;
     if (uid === "") {
         alert("Please Enter Reg/ID_Num!");
@@ -66,32 +67,50 @@ function DeleteData() {
         alert("Please Enter Reg/ID_Num!");
         return;
     }
-    const pass = prompt("Enter Password to Delete Data:");
+    const pass = prompt("Confirm Access Code:");
 
     if (pass === "kasewa") {
         const conf = confirm("Confirm deletion of Data for Reg/ID_Num: " + uid + "!");
         if (conf === true) {
+
             const userRef = ref(db, 'Members/' + uid);
-            remove(userRef)
-                .then(() => {
-                    alert("Successfully Deleted!");
-                    document.getElementById("uid").value = "";
-                    document.getElementById("uname").value = "";
-                    document.getElementById("gender").value = "";
-                    document.getElementById("uphone").value = "";
-                    document.getElementById("ustatus").value = "";
+            get(userRef)
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        remove(userRef)
+                            .then(() => {
+                                alert("Successfully Deleted!");
+                                document.getElementById("uid").value = "";
+                                document.getElementById("uname").value = "";
+                                document.getElementById("gender").value = "";
+                                document.getElementById("uphone").value = "";
+                                document.getElementById("ustatus").value = "";
+                            })
+                            .catch((error) => {
+                                alert("Failed to Delete Data: " + error);
+                            });
+                    }
+
+                    if (!snapshot.exists()) {
+                        alert("Reg/ID_Num NOT Found!");
+                        document.getElementById("uid").value = "";
+                        document.getElementById("uname").value = "";
+                        document.getElementById("gender").value = "";
+                        document.getElementById("uphone").value = "";
+                        document.getElementById("ustatus").value = "";
+                    }
                 })
                 .catch((error) => {
-                    alert("Failed to Delete Data: " + error);
+                    alert("Failed to Load Data!" + error);
                 });
+        }
+        else {
+            alert("Deletion Cancelled.");
+        }
+
     }
     else {
-        alert("Deletion Cancelled.");
-    }
-
-}
-else {
-        alert("Incorrect Password! Access Denied.");
+        alert("Access Denied.");
     }
 }
 
@@ -103,7 +122,7 @@ const BtnDelAll = document.getElementById("btnclear");
 BtnDelAll.addEventListener("click", DeleteAllData);
 //function to remove all data
 function DeleteAllData() {
-    const pass = prompt("Enter Password to Delete ALL Data:");
+    const pass = prompt("Confirm Access Code:");
     if (pass === "kasewa") {
         const del = confirm("Warning! This action will delete ALL data in the database. This action cannot be undone.");
         if (del === true) {
@@ -120,13 +139,13 @@ function DeleteAllData() {
                 .catch((error) => {
                     alert("Failed to Delete All Data: " + error);
                 });
+        }
+        else {
+            alert("Deletion Cancelled.");
+        }
     }
     else {
-        alert("Deletion Cancelled.");
-    }
-}
-else {
-        alert("Incorrect Password! Access Denied.");
+        alert("Access Denied.");
     }
 }
 
@@ -145,7 +164,7 @@ function UpdateData() {
         alert("Please Enter Reg/ID_Num!");
         return;
     }
-    const pass2 = prompt("Enter Password to Update Data:");
+    const pass2 = prompt("Confirm Access Code:");
 
     if (pass2 === "kasewa") {
 
@@ -179,7 +198,7 @@ function UpdateData() {
                         .then(() => {
                             alert("Successfully Updated!");
                         }).catch((error) => {
-                            alert("Failed to Update Data!" + error);
+                            alert("Failed to Update Data: " + error);
                         })
                 }
 
@@ -197,8 +216,9 @@ function UpdateData() {
             });
     }
     else {
-        alert("Incorrect Password! Access Denied.");
+        alert("Access Denied.");
 
     }
 }
 
+document.querySelector(".current-year").textContent = new Date().getFullYear();

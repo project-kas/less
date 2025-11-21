@@ -41,7 +41,7 @@ function AddData() {
     const gender = document.getElementById("gender").value;
     const uid = document.getElementById("uid").value;
     const uphone = document.getElementById("uphone").value;
-    const ustatus = document.getElementById("ustatus").value;
+    const ustatus = "Pending";
 
     if (uid === "") {
         alert("Please Enter Reg/ID_Num!");
@@ -62,7 +62,6 @@ function AddData() {
                     Phone: uphone,
                     Gender: gender,
                     Status: ustatus
-
                 })
                     .then(() => {
                         alert("Successfully Registered!");
@@ -81,7 +80,16 @@ function AddData() {
 
 //Logout
 const btnout = document.getElementById("btnlog");
-btnout.addEventListener("click", logout);
-function logout() {
+btnout.addEventListener("click", login);
+function login() {
+    location.href = "login.html";
+}
+
+//Home
+const btnhome = document.getElementById("home");
+btnhome.addEventListener("click", home);
+function home() {
     location.href = "index.html";
 }
+
+document.querySelector(".current-year").textContent = new Date().getFullYear();
