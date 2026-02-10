@@ -70,9 +70,7 @@ h2 {
 
 table {
     width: 100%;
-    border-color: green;
-    border-width: 20px;
-    border-radius: 4px;
+    
 
 }
 th{
@@ -96,6 +94,9 @@ td {
 
 #mytable {
     font-size: 10.5pt;
+    border-color: green;
+    border-width: 20px;
+    border-radius: 4px;
 }
 
 tr:hover{
