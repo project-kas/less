@@ -85,11 +85,12 @@ tr {
     border: none;
 }
 
-table,
-th,
+/*table,
+th,*/
 td {
-    border: 1px solid white;
-    border-collapse: inherit;
+   /* border: 1px solid white;*/
+    border-collapse: collapse;
+    border-radius: 3px;
 }
 
 .data table {
