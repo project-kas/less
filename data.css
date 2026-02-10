@@ -93,11 +93,7 @@ td {
 }
 
 #mytable {
-    border: 1px solid red;
     font-size: 10.5pt;
-    border-color: green;
-    border-width: 20px;
-    border-radius: 4px;
 }
 
 tr:hover{
