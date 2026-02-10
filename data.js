@@ -20,10 +20,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 
-let table = document.getElementById("mytable");/*
-table.style.borderWidth = "20px";
-table.style.borderColor = "green";
-table.style.borderRadius = "4px";*/
+let table = document.getElementById("mytable");
 
 function insertRow(data) {
     const row = table.insertRow(-1);

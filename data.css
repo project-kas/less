@@ -46,7 +46,8 @@ h2 {
     padding: 5px 10px;
     border-radius: 5px;
 }
-#logout{
+
+#logout {
     color: white;
     margin: 8px 0px;
     background-color: #f44336;
@@ -70,17 +71,20 @@ h2 {
 
 table {
     width: 100%;
-    
+
 
 }
-th{
+
+th {
     color: white;
     border-radius: 4px;
     background-color: rgb(4, 43, 4);
 }
-tr{
+
+tr {
     border: none;
 }
+
 table,
 th,
 td {
@@ -93,9 +97,13 @@ td {
 }
 
 #mytable {
+    border: 1px;
     font-size: 10.5pt;
+    border-width: 20px;
+    border-color: green;
+    border-radius: 4px;
 }
 
-tr:hover{
+tr:hover {
     background-color: darkslategray;
 }
