@@ -21,6 +21,8 @@ const db = getDatabase(app);
 
 
 let table = document.getElementById("mytable");
+table.style.borderWidth = "20px";
+table.style.borderColor = "red";
 
 function insertRow(data) {
     const row = table.insertRow(-1);

@@ -81,14 +81,7 @@ th {
     background-color: rgb(4, 43, 4);
 }
 
-tr {
-    border: none;
-}
-
-/*table,
-th,*/
 td {
-   /* border: 1px solid white;*/
     border-collapse: collapse;
     border-radius: 3px;
 }
@@ -98,11 +91,7 @@ td {
 }
 
 #mytable {
-    border: 1px;
     font-size: 10.5pt;
-    border-width: 20px;
-    border-color: green;
-    border-radius: 4px;
 }
 
 tr:hover {
