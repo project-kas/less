@@ -75,6 +75,11 @@ table {
     border-radius: 4px;
 
 }
+th{
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(4, 43, 4);
+}
 tr{
     border: none;
 }
