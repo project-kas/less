@@ -89,7 +89,7 @@ table,
 th,
 td {
     border: 1px solid white;
-    border-collapse: collapse;
+    border-collapse: inherit;
 }
 
 .data table {
