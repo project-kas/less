@@ -57,3 +57,12 @@ get(ref(db, 'Members/'))
     }).catch((error) => {
         console.error("Error fetching data: ", error);
     });
+
+
+    const ret = document.getElementById('retv');
+    ret.addEventListener("click", retrieve);
+
+    function retrieve(){
+        document.getElementById("data").style.display = "none";
+        document.getElementById("popup").style.display = "flex";
+    }
