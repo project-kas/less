@@ -5,7 +5,7 @@
      }
 
     //Logout
-    const btnout = document.getElementById("logout");
+    const btnout = document.getElementById("log");
     btnout.addEventListener("click", logout);
     function logout() {
         sessionStorage.clear();
@@ -13,7 +13,7 @@
     }
 
     //Print Data
-    const btnprint = document.getElementById("btnfpd");
+    const btnprint = document.getElementById("pdata");
     btnprint.addEventListener("click", printdata);
     function printdata() {
         location.href = "printdata.html";
@@ -45,7 +45,7 @@
     <div class="data" id="data">
         <h1>Lengut Security System!</h1>
         <div class="nav">
-            <li><a href="" id="pdata">Print_Data</a></li>
+            <li><a href="" id="pdata">Print</a></li>
             <li><a href="" id="retv">Retrieve</a></li>
             <li><a href="" id="log">Log_Out</a></li>
         </div>
@@ -94,5 +94,6 @@
         document.getElementById("popup").style.display = "none";
     }
 </script>
+
 
 </html>
