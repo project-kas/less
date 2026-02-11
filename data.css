@@ -34,7 +34,10 @@ h2 {
     background-color: rgb(72, 87, 72);
     border-radius: 4px;
 }
-.nav #retv, #pdata, #log{
+
+.nav #retv,
+#pdata,
+#log {
     margin: 2%;
     display: inline-flex;
     padding: 1%;
@@ -42,9 +45,12 @@ h2 {
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
 }
-.nav #retv:hover, #pdata:hover, #log:hover{
+
+.nav #retv:hover,
+#pdata:hover,
+#log:hover {
     background-color: #666;
     cursor: pointer;
 }
@@ -115,7 +121,7 @@ tr:hover {
     background-color: darkslategray;
 }
 
-.popup{
+.popup {
     height: 99vh;
     background: #2e2929;
     justify-content: center;
@@ -123,37 +129,45 @@ tr:hover {
     display: none;
     flex-direction: column;
 }
-label{
+
+label {
     color: white;
     font-size: 24px;
     margin: 1% 0 1% 0;
+    margin-bottom: 5%;
 }
-input{
+
+input {
     font-size: 19px;
     padding: 1%;
     text-align: center;
     border-radius: 6px;
     border: none;
-    color :red;    
-    width: 30%;
+    color: red;
+    width: 50%;
+    margin-bottom: 4%;
 }
-.btn{
-    width: 30%;
+
+.btn {
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     display: flex;
 }
-#access, #abort{
+
+#access,
+#abort {
     font-size: 19px;
     padding: 4%;
     background: black;
     color: white;
     border-radius: 6px;
-    border: none;    
+    border: none;
     width: 48%;
     margin-bottom: 2%;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background-color: #666;
 }
