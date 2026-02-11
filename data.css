@@ -43,7 +43,7 @@ h2 {
 .nav li a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 .nav li:hover{
     background-color: #666;
@@ -157,4 +157,5 @@ button{
 }
 button:hover{
     background-color: #666;
+
 }
