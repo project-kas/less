@@ -1,8 +1,8 @@
 <script type="module">
-    if (!sessionStorage.getItem('RegNo')) {
-        alert("Please login first!");
-        location.href = "login.html";
-    }
+    /* if (!sessionStorage.getItem('RegNo')) {
+         alert("Please login first!");
+         location.href = "login.html";
+     }*/
 
     //Logout
     const btnout = document.getElementById("logout");
@@ -47,23 +47,34 @@
     <div class="data">
         <h1>Lengut Security System!</h1>
         <div class="nav">
-            <button id="logout">Log_Out</button>
+
+            <ul>
+                <li><a href=""><b style="font-weight: bolder">| | |</b> Database Operation</a>
+                    <ul>
+                        <li><a href="#" id="btnfpd">Print_Data</a></li>
+                        <li><a href="#" id="btnret">Retrieve</a></li>
+                        <li><a href="#" id="logout">Log_Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <!--<button id=""></button>-->
         </div>
-        <h2>Database</h2>
-        <div class="search">
-            <button id="btnret">Retrieve</button>
-            <button id="btnfpd">Print_Data</button>
-        </div>
+        <!--<div class="search">
+            <button id=""></button>
+            <button id=""></button>
+        </div>-->
         <div class="table">
             <table id="mytable">
                 <!--<tr>-->
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Reg/ID.NO</th>
-                    <th>Phone.No</th>
-                    <th>Status</th>
-               <!-- </tr>-->
+                <th>#</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Reg/ID.NO</th>
+                <th>Phone.No</th>
+                <th>Status</th>
+                <!-- </tr>-->
             </table>
         </div>
     </div>

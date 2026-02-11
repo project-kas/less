@@ -29,8 +29,8 @@ h2 {
 
 .nav {
     font-size: 16px;
-    text-align: right;
-    margin: 20px 5px 0px 0px;
+    text-align: left;
+    margin: 10px 5px 0px 0px;
 }
 
 .search {
@@ -88,6 +88,7 @@ td {
 
 .data table {
     color: white;
+    /*vvgvgbvv*/
 }
 
 #mytable {
@@ -96,4 +97,60 @@ td {
 
 tr:hover {
     background-color: darkslategray;
+}
+
+
+
+
+a {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 3%;
+    display: inline-block;
+    width: 220px;
+    margin-bottom: 2%;
+}
+
+ul {
+    display: inline;
+    margin: 0;
+    padding: 0.5%;
+}
+
+ul li {
+    display: inline-block;
+    background: #2e2929;
+}
+ul li a{
+    color: rgb(211, 208, 208);
+}
+
+ul li:hover {
+    background: #2e2929;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: relative;
+    width: 200px;
+    display: none;
+}
+
+ul li ul li {
+    background: #2e2929;
+    display: block;
+    margin: .5%;
+}
+
+ul li ul li a {
+    display: block !important;
+}
+
+ul li ul li:hover {
+    background: #666;
 }
