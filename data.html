@@ -16,6 +16,8 @@
     const btnprint = document.getElementById("pdata");
     btnprint.addEventListener("click", printdata);
     function printdata() {
+        document.getElementById("navigation").style.display ="none";
+        document.getElementById("mytable").style.color ="black";
         location.href = "printdata.html";
     }
 
@@ -36,7 +38,7 @@
 <body>
     <div class="data" id="data">
         <h1>Lengut Security System!</h1>
-        <div class="nav">
+        <div class="nav" id="navigation">
             <button type="submit" id="pdata">Print_Data</button>
             <button type="submit" id="retv">Retrieve</button>
             <button type="submit" id="log">Log_Out</button>
@@ -72,6 +74,7 @@
         if (pass !== "kasewa") {
             alert("Access Denied!");
         } else {
+            alert("Access Granted!");
             location.href = "retdata.html";
         }
     }
@@ -86,6 +89,5 @@
     }
 
 </script>
-
 
 </html>
