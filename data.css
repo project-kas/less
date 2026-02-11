@@ -25,6 +25,7 @@ h2 {
 .data {
     background-color: black;
     width: 100%;
+    display: block;
 }
 
 .nav {
@@ -33,19 +34,17 @@ h2 {
     background-color: rgb(72, 87, 72);
     border-radius: 4px;
 }
-.nav li{
-    list-style: none;
+.nav #retv, #pdata, #log{
     margin: 2%;
     display: inline-flex;
     padding: 1%;
     border-radius: 4px;
-}
-.nav li a{
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
 }
-.nav li:hover{
+.nav #retv:hover, #pdata:hover, #log:hover{
     background-color: #666;
     cursor: pointer;
 }
@@ -144,7 +143,7 @@ input{
     align-items: center;
     display: flex;
 }
-button{
+#access, #abort{
     font-size: 19px;
     padding: 4%;
     background: black;
@@ -157,6 +156,4 @@ button{
 }
 button:hover{
     background-color: #666;
-
 }
-

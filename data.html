@@ -19,15 +19,7 @@
         location.href = "printdata.html";
     }
 
-    /*//Open Admin_form
-    const pop = document.getElementById("retv");
-    pop.addEventListener("click", retrieve);
-    function retrieve() {
-        //const code = prompt("Enter Access Code:");
-        document.getElementById("data").style.display = "none";
-        alert("hello")
-        document.getElementById("popup").style.display = "flex";
-    }*/
+ 
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,9 +37,9 @@
     <div class="data" id="data">
         <h1>Lengut Security System!</h1>
         <div class="nav">
-            <li><a href="" id="pdata">Print</a></li>
-            <li><a href="" id="retv">Retrieve</a></li>
-            <li><a href="" id="log">Log_Out</a></li>
+            <button type="submit" id="pdata">Print_Data</button>
+            <button type="submit" id="retv">Retrieve</button>
+            <button type="submit" id="log">Log_Out</button>
         </div>
         <div class="table">
             <table id="mytable">
@@ -84,7 +76,7 @@
             location.href = "retdata.html";
         }
     }
-
+    //Open Admin_form
     const abort = document.getElementById('abort');
     abort.addEventListener("click", cancel);
 
@@ -93,7 +85,7 @@
         document.getElementById("data").style.display = "block";
         document.getElementById("popup").style.display = "none";
     }
-</script>
 
+</script>
 
 </html>
