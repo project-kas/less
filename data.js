@@ -1,7 +1,7 @@
-if (!sessionStorage.getItem('RegNo')) {
+/*if (!sessionStorage.getItem('RegNo')) {
     alert("Please login first!");
     location.href = "login.html";
-}
+}*/
 //imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
 import { getDatabase, ref, get, set, } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-database.js";
@@ -63,6 +63,7 @@ get(ref(db, 'Members/'))
     ret.addEventListener("click", retrieve);
 
     function retrieve(){
-        document.getElementById("data").style.display = "none";
+        location.href = "retdata.html";
+        /*document.getElementById("data").style.display = "none";
         document.getElementById("popup").style.display = "flex";
-    }
+    */}

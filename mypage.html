@@ -1,0 +1,74 @@
+<script type="module">
+    if (!sessionStorage.getItem('RegNo')) {
+        alert("Please login first!");
+        location.href = "login.html";
+    }
+    const uphone = sessionStorage.getItem('cont');
+    const ustat = sessionStorage.getItem('stat');
+    const reg = sessionStorage.getItem('RegNo');
+    const uname = sessionStorage.getItem('name');
+    const ugender = sessionStorage.getItem('gender');
+    document.getElementById('reg').innerText = reg;
+    document.getElementById('uname').innerText = uname;
+    document.getElementById('ustat').innerText = ustat;
+    document.getElementById('uphone').innerText = uphone;
+    document.getElementById('ugender').innerText = ugender;
+
+    if (ustat === "Registered") {
+        document.getElementById('ustat').style.backgroundColor = "green";
+
+    } else {
+        document.getElementById('ustat').style.backgroundColor = "red";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengut Community</title>
+    <script type="module" src="mypage.js" defer></script>
+    <link rel="stylesheet" href="mypage.css">
+    <link rel="icon" type="image/x-icon" href="fav.ico">
+    </link>
+</head>
+
+<body>
+    <h2>Lengut Community.<button id="logout">Log_Out</button></h2>
+    <div class="container">
+        <div class="profile">
+            <img src="prof.jpg" id="prof" alt="Picture">
+            <p>User: &emsp;<span id="reg"></span></p>
+        </div>
+        <div class="main">
+            <div class="details">
+                <h4>Personal Details</h4>
+                <p>Name &emsp;<span id="uname"></span></p>
+                <p>Status &emsp;<span id="ustat"></span></p>
+                <p>Contact &emsp;<span id="uphone"></span></p>
+                <p>Gender &emsp;<span id="ugender"></span></p>
+            </div>
+            <div class="read">
+                <h4>About</h4>
+                <p>Lengut Community is a vibrant and diverse community dedicated to fostering connections and promoting
+                    cultural exchange. Our mission is to create a welcoming environment where individuals can share
+                    their experiences, learn from one another, and celebrate our unique heritage.</p>
+                <h4>Contact</h4>
+                <p>If you have any questions or would like to get in touch with us, please feel free to reach out via
+                    Phone at:<br><br>
+
+
+                    Call or WhatsApp: +254-768-724-824.<br><br>
+
+                    We look forward to hearing from you!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> &copy; <span class="current-year"></span> Lengut Community. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

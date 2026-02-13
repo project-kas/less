@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(5, 15, 36);
+    
 }
 .container {
     display: grid;
@@ -32,12 +33,42 @@ body {
     padding: 10px;
     text-align: center;
     border-radius: 10px;
-    background-color: white
+    background-color: black;     
+    background-image: url("login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
+.retdata {
+    margin: auto;
+    width: 50vh;
+    border: 3px solid #2d2f3e;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;     
+    background-image: url("sec.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.register {
+    margin: auto;
+    width: 50vh;
+    border: 3px solid #2d2f3e;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white; 
+    background-image: url("key.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 h2 {
     text-align: left;
-    color: #333;
+    /*color: #333;/**/
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -63,6 +94,7 @@ hr {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 4px;
+    opacity: .9;
 }
 #btnlog,
 #btndt,
@@ -160,4 +192,11 @@ footer{
     background-color: rgb(10, 25, 60);
     color: white;
     margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;    
+}
+a:hover{
+    background-color: red;
 }

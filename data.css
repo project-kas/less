@@ -3,7 +3,12 @@
 }
 
 body {
-    background-color: darkgrey;
+    background-color: darkgrey;    
+    background-image: url("server-room.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 h1 {
@@ -14,7 +19,6 @@ h1 {
 
 h2 {
     font-size: 24px;
-    ;
     font-style: oblique;
     text-align: center;
     color: aquamarine;
@@ -25,7 +29,8 @@ h2 {
 .data {
     background-color: black;
     width: 100%;
-    display: block;
+    display: none;    
+    opacity: .8;
 }
 
 .nav {
@@ -122,12 +127,18 @@ tr:hover {
 }
 
 .popup {
-    height: 99vh;
+    margin: 15% 5% 0 5%;
+    height: 50vh;
     background: #2e2929;
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
     flex-direction: column;
+    background-image: url("admin.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    border-radius: 2%;
 }
 
 label {
@@ -166,6 +177,9 @@ input {
     width: 48%;
     margin-bottom: 2%;
     cursor: pointer;
+}
+#access:hover, #abort:hover{
+    background-color: #2e2929;
 }
 
 button:hover {

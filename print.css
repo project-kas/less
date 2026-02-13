@@ -11,7 +11,7 @@
 
 /* Adjust font sizes for better readability on paper */
 body {
-    font-size: 10pt;
+    font-size: 11pt;
 }
 h1{
     text-align: center;
@@ -25,6 +25,7 @@ th, td {
     border: 1px solid #080808;
     padding: 8px;
     text-align: left;
+    color: black;
 }
 
 /* Manage page breaks within table rows if necessary */

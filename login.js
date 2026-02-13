@@ -56,7 +56,11 @@ function CheckData() {
                     if (data.Phone === phone) {
                         document.getElementById("uphone").value = "";
                         document.getElementById("regno").value = "";
-                        window.location.href = "data.html";
+                        sessionStorage.setItem('name', data.Name);
+                        sessionStorage.setItem('stat', data.Status);
+                        sessionStorage.setItem('cont', data.Phone);
+                        sessionStorage.setItem('gender', data.Gender);
+                        window.location.href = "mypage.html";
                     }else{
                     alert("Incorrect Login Details!");}
             }

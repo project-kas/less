@@ -1,8 +1,8 @@
 <script type="module">
-    if (!sessionStorage.getItem('RegNo')) {
+    /*if (!sessionStorage.getItem('RegNo')) {
          alert("Please login first!");
          location.href = "login.html";
-     }
+     }*/
 
     //Logout
     const btnout = document.getElementById("log");
@@ -16,8 +16,6 @@
     const btnprint = document.getElementById("pdata");
     btnprint.addEventListener("click", printdata);
     function printdata() {
-        document.getElementById("navigation").style.display ="none";
-        document.getElementById("mytable").style.color ="black";
         location.href = "printdata.html";
     }
 
@@ -37,7 +35,7 @@
 
 <body>
     <div class="data" id="data">
-        <h1>Lengut Security System!</h1>
+        <h1>L.C Database System!</h1>
         <div class="nav" id="navigation">
             <button type="submit" id="pdata">Print_Data</button>
             <button type="submit" id="retv">Retrieve</button>
@@ -74,8 +72,8 @@
         if (pass !== "kasewa") {
             alert("Access Denied!");
         } else {
-            alert("Access Granted!");
-            location.href = "retdata.html";
+            document.getElementById('popup').style.display = "none";
+            document.getElementById('data').style.display = "block";
         }
     }
     //Open Admin_form
@@ -84,8 +82,9 @@
 
     function cancel() {
         const pass = document.getElementById('password').value = "";
-        document.getElementById("data").style.display = "block";
-        document.getElementById("popup").style.display = "none";
+        location.href = "login.html";
+        /*document.getElementById("data").style.display = "block";
+        document.getElementById("popup").style.display = "none";*/
     }
 
 </script>

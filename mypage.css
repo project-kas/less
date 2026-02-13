@@ -1,0 +1,122 @@
+h2 {
+    top: 0;
+    color: white;
+    font-size: 28px;
+    position: sticky;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 button {
+    padding-top: 1% 0 1% 0;
+    font-size: 20px;
+    border: none;
+    color: red;
+    background-color: white;
+}
+
+h2 button:hover {
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+}
+
+.profile {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(32, 21, 44);
+    padding: 1%;
+    flex-direction: column;
+    opacity: .7;
+}
+
+#prof {
+    border-radius: 50%;
+    width: 98px;
+    height: 98px;
+    border: 3px solid green;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+}
+
+.main {
+    background-image: url("lobo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 2%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    background-color: black;
+    margin: 1%;
+    height: 400px;
+    width: 48%;
+    opacity: .7;
+    border-radius: 4px;
+}
+
+.details h4 {
+    color: black;
+    margin: 2px;
+    background-color: white;
+}
+
+.details p {
+    margin-left: 2%;
+}
+
+.read {
+    border-radius: 4px;
+    background-color: rgb(32, 21, 44);
+    margin: 1%;
+    height: 400px;
+    width: 48%;
+    opacity: .7;
+}
+
+.read h4 {
+    color: white;
+    background-color: black;
+}
+
+.read p {
+    text-align: justify;
+    margin: 2%;
+}
+
+footer {
+    z-index: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(32, 21, 44);
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        display: block;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .read {
+        width: 100%;
+    }
+}
