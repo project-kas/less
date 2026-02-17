@@ -76,6 +76,16 @@ p {
 .details p {
     margin-left: 2%;
 }
+.updates{
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+#upcomming{
+    animation: scroll 15s linear infinite;
+}
 
 .read {
     border-radius: 4px;
@@ -119,4 +129,13 @@ footer {
     .read {
         width: 100%;
     }
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
 }
