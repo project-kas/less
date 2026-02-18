@@ -41,6 +41,7 @@ function AddData() {
     const gender = document.getElementById("gender").value;
     const uid = document.getElementById("uid").value;
     const uphone = document.getElementById("uphone").value;
+    const uaddress = document.getElementById("uaddress").value;
     const ustatus = "Pending";
 
     if (uid === "") {
@@ -61,7 +62,8 @@ function AddData() {
                     Name: name,
                     Phone: uphone,
                     Gender: gender,
-                    Status: ustatus
+                    Status: ustatus,
+                    Address: uaddress
                 })
                     .then(() => {
                         alert("Successfully Registered!");

@@ -22,20 +22,19 @@ input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         document.getElementById("btnlog").click();
-    }})
+    }
+})
 const BtnCheck = document.getElementById("btnlog");
 //add event listener to button
 BtnCheck.addEventListener("click", CheckData);
 //function to add data
 function CheckData() {
 
-    //create session storage items
-    sessionStorage.setItem('RegNo', document.getElementById("regno").value);
-    const session = sessionStorage.getItem('RegNo');
-    
-
     const phone = document.getElementById("uphone").value;
     const uid = document.getElementById("regno").value;
+
+    //create session storage items 
+    sessionStorage.setItem('RegNo', uid);
 
     if (phone === "") {
         alert("Please Enter PHONE.NO!");
@@ -56,14 +55,11 @@ function CheckData() {
                     if (data.Phone === phone) {
                         document.getElementById("uphone").value = "";
                         document.getElementById("regno").value = "";
-                        sessionStorage.setItem('name', data.Name);
-                        sessionStorage.setItem('stat', data.Status);
-                        sessionStorage.setItem('cont', data.Phone);
-                        sessionStorage.setItem('gender', data.Gender);
                         window.location.href = "mypage.html";
-                    }else{
-                    alert("Incorrect Login Details!");}
-            }
+                    } else {
+                        alert("Incorrect Login Details!");
+                    }
+                }
             } if (!snapshot.exists()) {
                 alert("Reg/ID_Num not Found!");
             }
@@ -76,14 +72,14 @@ function CheckData() {
 //Register
 const btnreg = document.getElementById("btnreg1");
 btnreg.addEventListener("click", register);
-function register(){
+function register() {
     location.href = "regdata.html";
 }
 
 //Home
 const btnhome = document.getElementById("home");
 btnhome.addEventListener("click", home);
-function home(){
+function home() {
     location.href = "index.html";
 }
 

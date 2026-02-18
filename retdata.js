@@ -44,7 +44,7 @@ function ReadData() {
                 document.getElementById("gender").value = data.Gender;
                 document.getElementById("uphone").value = data.Phone;
                 document.getElementById("ustatus").value = data.Status;
-
+                document.getElementById("uaddress").value = data.Address;
             }
             if (!snapshot.exists()) {
                 alert("Reg/ID_Num NOT Found!");
@@ -85,6 +85,7 @@ function DeleteData() {
                                 document.getElementById("gender").value = "";
                                 document.getElementById("uphone").value = "";
                                 document.getElementById("ustatus").value = "";
+                                document.getElementById("uaddress").value = "";
                             })
                             .catch((error) => {
                                 alert("Failed to Delete Data: " + error);
@@ -98,6 +99,7 @@ function DeleteData() {
                         document.getElementById("gender").value = "";
                         document.getElementById("uphone").value = "";
                         document.getElementById("ustatus").value = "";
+                        document.getElementById("uaddress").value = "";
                     }
                 })
                 .catch((error) => {
@@ -135,6 +137,7 @@ function DeleteAllData() {
                     document.getElementById("gender").value = "";
                     document.getElementById("uphone").value = "";
                     document.getElementById("ustatus").value = "";
+                    document.getElementById("uaddress").value = "";
                 })
                 .catch((error) => {
                     alert("Failed to Delete All Data: " + error);
@@ -181,7 +184,7 @@ function UpdateData() {
 
         const uphone = document.getElementById("uphone").value;
         const ustatus = document.getElementById("ustatus").value;
-
+        const uaddress = document.getElementById("uaddress").value;
 
         const userRef = ref(db, 'Members/' + uid);
         get(userRef)
@@ -193,7 +196,8 @@ function UpdateData() {
                         Name: name,
                         Phone: uphone,
                         Gender: gender,
-                        Status: ustatus
+                        Status: ustatus,
+                        Address: uaddress
                     })
                         .then(() => {
                             alert("Successfully Updated!");
@@ -209,6 +213,7 @@ function UpdateData() {
                     document.getElementById("gender").value = "";
                     document.getElementById("uphone").value = "";
                     document.getElementById("ustatus").value = "";
+                    document.getElementById("uaddress").value = "";
                 }
             })
             .catch((error) => {
