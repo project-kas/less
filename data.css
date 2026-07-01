@@ -29,7 +29,7 @@ h2 {
 .data {
     background-color: black;
     width: 100%;
-    display: none;    
+    display: block;    
     opacity: .8;
 }
 
