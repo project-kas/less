@@ -56,9 +56,11 @@
    
 </body>
 <script>
-    const admin = document.getElementById("retv");
-    admin.addEventListener('click', () => {
+    const ret = document.getElementById('retv');
+    ret.addEventListener("click", retrieve);
+
+    function retrieve(){
         location.href = "vry.html";
-    });
+    }
 </script>
 </html>
