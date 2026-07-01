@@ -19,4 +19,29 @@
         </div>
     </div>
 </body>
+    <script>
+    const access = document.getElementById('access');
+    access.addEventListener("click", confirm);
+
+    function confirm() {
+        const pass = document.getElementById('password').value;
+        if (pass !== "kasewa") {
+            alert("Access Denied!");
+        } else {
+            document.getElementById('popup').style.display = "none";
+            location.href = "retdata.html";
+        }
+    }
+    //Open Admin_form
+    const abort = document.getElementById('abort');
+    abort.addEventListener("click", cancel);
+
+    function cancel() {
+        const pass = document.getElementById('password').value = "";
+        location.href = "login.html";
+        document.getElementById("data").style.display = "block";
+        document.getElementById("popup").style.display = "none";
+    }
+
+</script>
 </html>
